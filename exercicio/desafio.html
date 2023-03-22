@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social</title>
     <link rel="shortcut icon" href="logo-html.png" type="image/x-icon">
+
     <style>
 img{
 border-radius:50%;
@@ -42,10 +43,27 @@ div#link{
 
 
 }
+
+
+    div#rescodigo{
+    width: 100px;
+    height: 131px;
+    box-sizing: border-box;
+    border:3px solid red;
+    background-color: aquamarine;
+    margin:auto;
+    text-align: center;
+    }
+    div#mostraresultado{
+        background: white;
+        border: solid black 2px;
+        width: 50px;
+        height: 20px;
+    }
     </style>
 </head>
 <body>
-    <H1>Minhas redes sociais</H1>
+    <H1  id="titulo1">Minhas redes sociais</H1>
     <main>
     <h2>Quem sou eu?</h2>
     <p style="text-align: center;"><img src="fotofamilia-201.png" alt="foto família" id="foto perfil"></p>
@@ -55,7 +73,78 @@ div#link{
 <li><a href="https://pt-br.facebook.com/" target="_blank" rel="external">Facebook</a> - Veja meu perfil no facebook</li>
 <li><a href="https://www.instagram.com/" target="_blank" rel="external">Instagram</a> - Veja meu perfil no Instagram</li>
 <li><a href="https://www.youtube.com/" target="_blank" rel="external">Youtube</a> - Veja meu perfil no Youtube</li>
-<li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" rel="external">Twitter</a> - Veja meu perfil no Twitter</li> </div>
+<li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank" rel="external">Twitter</a> - Veja meu perfil no Twitter</li> 
+</div>
+
+<button id="iniciar">iniciar</button>
+<button id= 'voltar' >voltar</button>
+<input type="number" name="txtn1" id="txtn1"> +
+<input type="number" name="txtn2" id="txtn2">
+<button value="Somar" id="soma" type="button">Somar</button>=
+<div id="mostraresultado"></div>
+
+
+
+<script>
+    var a=window.document.getElementById("iniciar")
+    
+    a.addEventListener('click', clicar)
+    voltar.addEventListener('click', volta)
+    soma.addEventListener('click',resultado)
+
+    //var txt3=document.getElementById('mostraresultado')
+
+    
+    
+    
+    
+    
+    
+    function clicar(){
+        
+        titulo1.innerHTML ="FALA COMIGO BEBÊ"
+        titulo1.style.background='blue'
+        titulo1.style.color='white'
+        iniciar.style.background="red"
+    
+
+        
+
+    }
+    function volta(){
+
+    titulo1.innerHTML="volta"
+
+        
+
+    } 
+    
+
+    
+    
+function resultado(){
+    //var txt1=window.document.getElementById('txtn1')
+    //var txt2=window.document.getElementById('txtn2')
+    
+    //var t1=Number(txt1.value)
+    //var t2=Number(txt2.value)
+    var res= Number(txtn1.value) + Number(txtn2.value)
+    mostraresultado.style.background='red'
+    //document.getElementById('mostraresultado').innerHTML=`${Number(res)}`
+    mostraresultado.innerHTML=`${Number(res)}`
+
+    
+
+    
+}
+
+    
+    
+
+</script>
+
+
+    
 </main>
 </body>
 </html>
